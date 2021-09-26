@@ -26,6 +26,7 @@ const AllItems = ({ docId }) => {
     getItems();
   }, [docId]);
 
+
   const sortByItemsAscending = (ascending) => {
     const compare = (a, b) => {
       if (a.songName < b.songName) {

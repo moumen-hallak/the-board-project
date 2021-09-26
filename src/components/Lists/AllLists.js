@@ -61,37 +61,37 @@ const AllLists = () => {
   };
 
   return (
-    <Row> 
+    <Row>
       <Row className="mainContainer d-flex justify-content-between flex-wrap">
         <Col className="p-0 m-0" xs={12} md={12} lg={4}>
-        <ListForm />
+          <ListForm />
         </Col>
         <Col className="p-0 m-0 d-flex justify-content-center" xs={6} md={6} lg={4}>
           <div>
-          <BootstrapSwitchButton
-            checked={view}
-            onChange={handleChange}
-            onlabel='Board View'
-            onstyle='danger'
-            offlabel='List View'
-            offstyle='success'
-          />
+            <BootstrapSwitchButton
+              checked={view}
+              onChange={handleChange}
+              onlabel='Board View'
+              onstyle='danger'
+              offlabel='List View'
+              offstyle='success'
+            />
           </div>
         </Col>
         <Col className="p-0 m-0 d-flex justify-content-center" xs={6} md={6} lg={4}>
-        <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic" >
-            Sort Lists
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item onClick={sortByListAscending}>
-              <SortAlphaUpAlt color="#0f939d" size={25} style={{ cursor: "pointer" }} />
-            </Dropdown.Item>
-            <Dropdown.Item onClick={sortByListDescending}>
-              <SortAlphaDownAlt color="#0f939d" size={25} style={{ cursor: "pointer" }} />
-            </Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
+          <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic" >
+              Sort Lists
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item onClick={sortByListAscending}>
+                <SortAlphaUpAlt color="#0f939d" size={25} style={{ cursor: "pointer" }} />
+              </Dropdown.Item>
+              <Dropdown.Item onClick={sortByListDescending}>
+                <SortAlphaDownAlt color="#0f939d" size={25} style={{ cursor: "pointer" }} />
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Col>
 
 
