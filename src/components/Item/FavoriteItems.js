@@ -4,6 +4,8 @@ import Item from "./Item";
 
 const FavoriteItems = ({ docId }) => {
   const [items, setItems] = useState([]);
+
+  useEffect(() => {
   const getItems = () => {
     db.collection("board").doc(docId).collection('items').where("fav", "==", true).onSnapshot(function (querySnapshot) {
       setItems(
@@ -19,10 +21,7 @@ const FavoriteItems = ({ docId }) => {
       );
     })
   }
-
-
-  useEffect(() => {
-    getItems()
+  getItems()
   }, [docId])
 
   return (
